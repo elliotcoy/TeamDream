@@ -67,7 +67,7 @@ skin = instance_create(x,y,theVoiceSkin)
     positionCounter = 30;
 }
 
-
+/*
 if(x &lt; (player.x + xx - lightSize/2)){
     hspeed = distance_to_point(xx+player.x-lightSize/2,y)/8
 }
@@ -80,10 +80,12 @@ if(y &lt; (player.y + yy - lightSize/2)){
 else{
     vspeed = -distance_to_point(x,yy+player.y-lightSize/2)/8
 }
-
+*/
 //landCollision(groundObject)
-landCollision2(groundObject, lightSize/2, lightSize/2)
-effect_create_above(ef_firework,x+lightSize/2,y+lightSize/2,1,c_red)
+//landCollision2(groundObject, lightSize/2, lightSize/2)
+
+x += ((xx + player.x - lightSize/2) - x)/8
+y += ((yy + player.y - lightSize/2) - y)/8
 
 skin.x = x + lightSize/2;
 skin.y = y + lightSize/2;
