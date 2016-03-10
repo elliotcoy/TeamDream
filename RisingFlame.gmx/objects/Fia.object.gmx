@@ -117,11 +117,11 @@ if(hspeed&lt;-16){ hspeed=-16;}
 if(leftButton())
 {   if(rightButton()){
         friction(onGround)
-        skin.sprite_index = Idle
+        if(onGround){skin.sprite_index = Idle}
     }
     else{
     //MOVE LEFT
-    skin.sprite_index = Walk
+        if(onGround){skin.sprite_index = Walk}
     skin.image_xscale = -1
         hspeed -= 2*global.timeScale
         if(hspeed &gt; 0){
@@ -132,7 +132,7 @@ if(leftButton())
 else{
     //MOVE RIGHT
     if(rightButton()){
-        skin.sprite_index = Walk
+        if(onGround){skin.sprite_index = Walk}
         skin.image_xscale = 1
         hspeed += 2*global.timeScale
         if(hspeed &lt; 0){
@@ -141,7 +141,7 @@ else{
     }
     else{
         friction(onGround)
-        skin.sprite_index = Idle
+        if(onGround){skin.sprite_index = Idle}
     }
 }
 
@@ -149,13 +149,13 @@ else{
 if(onGround){
     if(actionButton()){
         vspeed = -28*global.timeScale
-        onGround = false;
+        onGround = false
     }
 }
 
 //Glide
 else{
-    
+    skin.sprite_index = Jump
 }
 </string>
           </argument>
