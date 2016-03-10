@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>lightSize = 1024
 light_create(lightSize,512,100)
+light_use_gradient(0)
+light_create(lightSize,512,100)
 
 player = instance_nearest(x,y,Fia)
 positionCounter = 30
@@ -61,8 +63,8 @@ skin = instance_create(x,y,theVoiceSkin)
           <argument>
             <kind>1</kind>
             <string>if(!positionCounter--){
-    xx = random_range(-256,256)
-    yy = random_range(-64,-256)
+    xx = random_range(-128,128)
+    yy = random_range(-64,-128)
     positionCounter = 30;
 }
 

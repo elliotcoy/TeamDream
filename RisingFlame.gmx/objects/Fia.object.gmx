@@ -148,7 +148,7 @@ else{
 //JUMP
 if(onGround){
     if(actionButton()){
-        vspeed = -26*global.timeScale
+        vspeed = -28*global.timeScale
         onGround = false;
     }
 }

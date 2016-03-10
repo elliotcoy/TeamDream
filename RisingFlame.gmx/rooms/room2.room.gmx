@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="map" x="0" y="0" name="inst_C4C3FB18" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="light" x="1280" y="384" name="inst_6F4915EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="light" x="1015" y="359" name="inst_6F4915EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="0" y="640" name="inst_5BEDEE79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="128" y="640" name="inst_95F94CCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="256" y="640" name="inst_374B59D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -81,63 +81,11 @@
     <instance objName="groundObject" x="3072" y="384" name="inst_E36E0B3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="3072" y="512" name="inst_2BF9FCAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="3072" y="640" name="inst_FD049378" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="3072" y="768" name="inst_8C7CBCBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="3072" y="896" name="inst_6EDB27ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="3072" y="1024" name="inst_B46F342E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="3072" y="1152" name="inst_CB3964D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="3072" y="1280" name="inst_69E9FC20" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="3072" y="1408" name="inst_C4EF1EAD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="2432" y="640" name="inst_CCC22A52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2944" y="768" name="inst_F99A549C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2560" y="1024" name="inst_F9F7346D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2432" y="1024" name="inst_CCE81729" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2304" y="1024" name="inst_49287A9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2176" y="1024" name="inst_7CC3D0CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2048" y="1024" name="inst_B917B3FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1920" y="1024" name="inst_4F938C91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="3072" y="1536" name="inst_AF42E7C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2944" y="1536" name="inst_AFA8E845" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2816" y="1536" name="inst_68E615C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2688" y="1536" name="inst_9BE49CDF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2560" y="1536" name="inst_E2C5E00F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2432" y="1536" name="inst_58D49519" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2304" y="1536" name="inst_E5F174B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2176" y="1536" name="inst_27E213AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2048" y="1536" name="inst_F5120418" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1920" y="1536" name="inst_266FFBFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1792" y="1536" name="inst_AD4810AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="3072" y="1664" name="inst_BFE6BD94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2944" y="1664" name="inst_93C6FB21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2816" y="1664" name="inst_5E712296" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2688" y="1664" name="inst_407CAB62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2560" y="1664" name="inst_C305735F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2432" y="1664" name="inst_0D26BDD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2304" y="1664" name="inst_C2C840B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2176" y="1664" name="inst_1570E409" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="2048" y="1664" name="inst_76EC61EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1920" y="1664" name="inst_889064C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1792" y="1664" name="inst_66B556B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1664" y="1664" name="inst_2249D3CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1536" y="1664" name="inst_B643AC3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1408" y="1664" name="inst_B44A2987" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1280" y="1664" name="inst_B07E096F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1152" y="1664" name="inst_558184A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1024" y="1664" name="inst_63B49B3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="896" y="1664" name="inst_C6D2F8F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="768" y="1664" name="inst_9480C479" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1536" y="1152" name="inst_B8D8C794" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1408" y="1152" name="inst_AEF09EF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1280" y="1152" name="inst_5B261BC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="1536" y="1408" name="inst_C673A671" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="640" y="1536" name="inst_812415D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="640" y="1664" name="inst_2E201460" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="640" y="1536" name="inst_A184687E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="640" y="1408" name="inst_DC4C48FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="640" y="1280" name="inst_ED05F296" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="640" y="1152" name="inst_D6BE925B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="640" y="1024" name="inst_6FBE02A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="640" y="896" name="inst_F016F286" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="groundObject" x="640" y="768" name="inst_E87664AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="groundObject" x="2560" y="640" name="inst_F9F7346D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="groundObject" x="2688" y="640" name="inst_CCE81729" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="groundObject" x="2816" y="640" name="inst_49287A9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="groundObject" x="2944" y="640" name="inst_7CC3D0CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="640" y="640" name="inst_58B183D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="896" y="384" name="inst_D12370FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="640" y="384" name="inst_CEA23816" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -146,10 +94,10 @@
     <instance objName="groundObject" x="-128" y="0" name="inst_093B2E2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="-128" y="128" name="inst_2B01774F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="768" y="384" name="inst_1DD54FD0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="light" x="512" y="384" name="inst_16AD337A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="light" x="128" y="384" name="inst_DE866553" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="light" x="1792" y="512" name="inst_1A32BEF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="light" x="840" y="579" name="inst_A4F5624B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="light" x="634" y="354" name="inst_16AD337A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="light" x="376" y="547" name="inst_DE866553" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="light" x="1529" y="540" name="inst_1A32BEF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="light" x="801" y="546" name="inst_A4F5624B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="autoBGparallax" x="256" y="0" name="inst_ECA2C36B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

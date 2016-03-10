@@ -70,6 +70,7 @@
     <object>objects\groundObject</object>
     <object>objects\level1Controller</object>
     <object>objects\light</object>
+    <object>objects\burst</object>
     <object>objects\map</object>
     <object>objects\obj_light_var</object>
     <object>objects\theVoice</object>
