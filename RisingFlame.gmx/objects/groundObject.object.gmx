@@ -2,7 +2,7 @@
 <object>
   <spriteName>groundSprite</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>cast_create(0)
+            <string>cast_create(100)
 cast_set_dynamic(1)
 </string>
           </argument>

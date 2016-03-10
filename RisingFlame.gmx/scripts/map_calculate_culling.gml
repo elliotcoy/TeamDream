@@ -14,7 +14,7 @@ for(i = 0; i < ds_list_size(l); i++)
         if(self.layer == other.layer)
         {
             lastCol = self.collision;
-            
+                        
             var xp, yp, sp;
             xp = self.x + (self.light_size / 2);
             yp = self.y + (self.light_size / 2);

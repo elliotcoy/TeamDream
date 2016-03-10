@@ -9,70 +9,69 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_new</sprite>
-    <sprite>sprites\playerSprite</sprite>
     <sprite>sprites\groundSprite</sprite>
     <sprite>sprites\theVoiceSprite</sprite>
+    <sprites name="Fia">
+      <sprite>sprites\FiaHitBox</sprite>
+      <sprite>sprites\Idle</sprite>
+      <sprite>sprites\Walk</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\bg1_01</background>
+    <background>background\bg1_02</background>
+    <background>background\bg1_03</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="ShadowsV0">
-      <scripts name="Light">
-        <script>scripts\light_use_gradient.gml</script>
-        <script>scripts\light_create.gml</script>
-      </scripts>
-      <scripts name="Map">
-        <script>scripts\map_create.gml</script>
-        <script>scripts\map_set_color_alpha.gml</script>
-        <script>scripts\map_draw.gml</script>
-        <script>scripts\map_calculate_culling.gml</script>
-      </scripts>
-      <scripts name="Cast">
-        <script>scripts\cast_create.gml</script>
-        <script>scripts\cast_set_dynamic.gml</script>
-      </scripts>
-      <scripts name="Core">
-        <script>scripts\core_shadow.gml</script>
-        <script>scripts\core_distance.gml</script>
-        <script>scripts\core_caster.gml</script>
-        <script>scripts\core_postprocess.gml</script>
-        <script>scripts\core_reductions.gml</script>
-      </scripts>
-    </scripts>
-    <scripts name="Controls">
-      <script>scripts\leftButton.gml</script>
-      <script>scripts\rightButton.gml</script>
-      <script>scripts\upButton.gml</script>
-      <script>scripts\downButton.gml</script>
-      <script>scripts\actionButton.gml</script>
-    </scripts>
+    <script>scripts\actionButton.gml</script>
+    <script>scripts\cast_create.gml</script>
+    <script>scripts\cast_set_dynamic.gml</script>
+    <script>scripts\core_caster.gml</script>
+    <script>scripts\core_distance.gml</script>
+    <script>scripts\core_postprocess.gml</script>
+    <script>scripts\core_reductions.gml</script>
+    <script>scripts\core_shadow.gml</script>
+    <script>scripts\downButton.gml</script>
+    <script>scripts\findSlope.gml</script>
+    <script>scripts\friction.gml</script>
     <script>scripts\landCollision.gml</script>
     <script>scripts\landCollision2.gml</script>
-    <script>scripts\findSlope.gml</script>
+    <script>scripts\leftButton.gml</script>
+    <script>scripts\light_create.gml</script>
+    <script>scripts\light_use_gradient.gml</script>
+    <script>scripts\map_calculate_culling.gml</script>
+    <script>scripts\map_create.gml</script>
+    <script>scripts\map_draw.gml</script>
+    <script>scripts\map_set_color_alpha.gml</script>
+    <script>scripts\rightButton.gml</script>
+    <script>scripts\upButton.gml</script>
     <script>scripts\while_meeting.gml</script>
   </scripts>
   <shaders name="shaders">
-    <shaders name="ShadowsV0">
-      <shader type="GLSLES">shaders\sdr_dist.shader</shader>
-      <shader type="GLSLES">shaders\sdr_blend_shadow.shader</shader>
-      <shader type="GLSLES">shaders\sdr_shadow.shader</shader>
-      <shader type="GLSLES">shaders\sdr_reduce_linear.shader</shader>
-      <shader type="GLSLES">shaders\sdr_post.shader</shader>
-      <shader type="GLSLES">shaders\sdr_caster_outline.shader</shader>
-    </shaders>
+    <shader type="GLSLES">shaders\sdr_blend_shadow.shader</shader>
+    <shader type="GLSLES">shaders\sdr_caster_outline.shader</shader>
+    <shader type="GLSLES">shaders\sdr_dist.shader</shader>
+    <shader type="GLSLES">shaders\sdr_post.shader</shader>
+    <shader type="GLSLES">shaders\sdr_reduce_linear.shader</shader>
+    <shader type="GLSLES">shaders\sdr_shadow.shader</shader>
   </shaders>
+  <fonts name="fonts">
+    <font>fonts\Font_1</font>
+  </fonts>
   <objects name="objects">
+    <object>objects\autoBGparallax</object>
+    <object>objects\cast</object>
+    <object>objects\Fia</object>
+    <object>objects\FiaShadow</object>
+    <object>objects\FiaSkin</object>
     <object>objects\gameController</object>
-    <objects name="ShadowsV0">
-      <object>objects\map</object>
-      <object>objects\light</object>
-      <object>objects\cast</object>
-      <object>objects\obj_light_var</object>
-    </objects>
     <object>objects\groundObject</object>
-    <object>objects\playerObject</object>
+    <object>objects\level1Controller</object>
+    <object>objects\light</object>
+    <object>objects\map</object>
+    <object>objects\obj_light_var</object>
     <object>objects\theVoice</object>
     <object>objects\theVoiceSkin</object>
   </objects>
