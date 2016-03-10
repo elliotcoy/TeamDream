@@ -85,8 +85,12 @@ else{
 //landCollision(groundObject)
 //landCollision2(groundObject, lightSize/2, lightSize/2)
 
-x += ((xx + player.x - lightSize/2) - x)/8
-y += ((yy + player.y - lightSize/2) - y)/8
+x += ((xx + player.x - lightSize/2) - x)/4
+y += ((yy + player.y - lightSize/2) - y)/4
+
+interest = instance_nearest(player.x,player.y,interestObject)
+x += ((xx + interest.x - lightSize/2) - x)/4
+y += ((yy + interest.y - lightSize/2) - y)/4
 
 skin.x = x + lightSize/2;
 skin.y = y + lightSize/2;

@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>onGround = 1
+flying = 0
 voice = instance_create(x,y,theVoice)
 skin = instance_create(x,y,FiaSkin)
 shadow = instance_create(x,y,FiaShadow)
@@ -122,7 +123,7 @@ if(leftButton())
     else{
     //MOVE LEFT
         if(onGround){skin.sprite_index = Walk}
-    skin.image_xscale = -1
+        skin.image_xscale = -1
         hspeed -= 2*global.timeScale
         if(hspeed &gt; 0){
             hspeed -= 2*global.timeScale
@@ -147,7 +148,8 @@ else{
 
 //JUMP
 if(onGround){
-    if(actionButton()){
+    flying = false
+    if(actionButtonPressed()){
         vspeed = -28*global.timeScale
         onGround = false
     }
@@ -156,7 +158,22 @@ if(onGround){
 //Glide
 else{
     skin.sprite_index = Jump
+    onGround = false
+    if(actionButtonPressed()){
+        flying = true
+    }
+    else if(actionButtonReleased()){
+        flying = false
+    }
+    if(flying){
+        skin.sprite_index = Fly
+        if(vspeed&lt;0){ vspeed=0 }
+        vspeed = clamp(vspeed-2,4,6)
+        hspeed = clamp(hspeed+skin.image_xscale * 8 ,-32,32)
+    }
 }
+
+
 </string>
           </argument>
         </arguments>
