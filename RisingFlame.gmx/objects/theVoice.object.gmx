@@ -25,11 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lightSize = 2048
-light_create(lightSize,512,0)
-light_create(lightSize,512,0)
+            <string>lightSize = 1024
+light_create(lightSize,512,100)
 
-player = instance_nearest(x,y,playerObject)
+player = instance_nearest(x,y,Fia)
 positionCounter = 30
 
 xx = -128

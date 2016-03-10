@@ -27,7 +27,9 @@
             <kind>1</kind>
             <string>image_xscale = random_range(0.6,0.9)
 image_yscale = image_xscale
-effect_create_above(ef_flare,x+random_range(-10,10),y+random_range(-10,10),1,c_white)
+r = random_range(-10,10);
+effect_create_above(ef_flare,x+r,y+r,1,c_gray)
+effect_create_above(ef_flare,x+r,y+r,1,c_white)
 </string>
           </argument>
         </arguments>
