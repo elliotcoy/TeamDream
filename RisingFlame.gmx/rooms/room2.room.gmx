@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="map" x="0" y="0" name="inst_C4C3FB18" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="light" x="1719" y="177" name="inst_6F4915EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="light" x="1723" y="325" name="inst_6F4915EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="0" y="640" name="inst_5BEDEE79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="128" y="640" name="inst_95F94CCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="256" y="640" name="inst_374B59D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -101,8 +101,8 @@
     <instance objName="autoBGparallax" x="256" y="0" name="inst_ECA2C36B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="interestObject" x="911" y="697" name="inst_07D51906" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="interestObject" x="534" y="678" name="inst_4B441F84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="interestObject" x="1792" y="256" name="inst_B7B1AC78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="interestObject" x="2432" y="512" name="inst_4380DBC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="interestObject" x="1663" y="316" name="inst_B7B1AC78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="interestObject" x="2577" y="629" name="inst_4380DBC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="interestObject" x="2048" y="512" name="inst_04C9CC5B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
