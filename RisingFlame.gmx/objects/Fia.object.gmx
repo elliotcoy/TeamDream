@@ -30,6 +30,7 @@ flying = 0
 voice = instance_create(x,y,theVoice)
 skin = instance_create(x,y,FiaSkin)
 shadow = instance_create(x,y,FiaShadow)
+instance_create(x,y,cameraTarget)
 </string>
           </argument>
         </arguments>
