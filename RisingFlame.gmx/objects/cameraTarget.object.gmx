@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>player = instance_nearest(x,y,Fia)
+
+view_xview[0] = x - view_wview[0]/2
+view_yview[0] = y - view_hview[0]/2
 </string>
           </argument>
         </arguments>

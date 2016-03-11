@@ -36,10 +36,14 @@ positionCounter = 30
 xx = -128
 yy = -128
 
-x = player.x + xx - lightSize/2
-y = player.y + yy - lightSize/2
+if(room != LevelOne){
+    x = xx + player.x - lightSize/2
+    y = yy + player.y - lightSize/2
+}
 
 skin = instance_create(x,y,theVoiceSkin)
+
+
 </string>
           </argument>
         </arguments>

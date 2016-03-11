@@ -7,15 +7,9 @@
     <extension index="0">extensions\Shadows</extension>
   </NewExtensions>
   <sounds name="sound">
-    <sound>sound\demoTrack</sound>
+    <sound>sound\bgm_level1</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_new</sprite>
-    <sprite>sprites\interestSprite</sprite>
-    <sprite>sprites\cameraSprite</sprite>
-    <sprite>sprites\lightSprite</sprite>
-    <sprite>sprites\groundSprite</sprite>
-    <sprite>sprites\theVoiceSprite</sprite>
     <sprites name="Fia">
       <sprite>sprites\FiaHitBox</sprite>
       <sprite>sprites\Idle</sprite>
@@ -26,6 +20,19 @@
       <sprite>sprites\Down</sprite>
       <sprite>sprites\FiaFire</sprite>
     </sprites>
+    <sprites name="VisualAids">
+      <sprite>sprites\lightSprite</sprite>
+      <sprite>sprites\cameraSprite</sprite>
+      <sprite>sprites\interestSprite</sprite>
+      <sprite>sprites\GuideSpeechSprite</sprite>
+      <sprite>sprites\levelUpSprite</sprite>
+      <sprite>sprites\groundSprite</sprite>
+    </sprites>
+    <sprites name="Set">
+      <sprite>sprites\BushSprite</sprite>
+    </sprites>
+    <sprite>sprites\theVoiceSprite</sprite>
+    <sprite>sprites\blackSprite</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_black</background>
@@ -73,8 +80,12 @@
       <script>scripts\while_meeting.gml</script>
     </scripts>
     <script>scripts\friction.gml</script>
+    <script>scripts\changeSong.gml</script>
+    <script>scripts\changeSong2.gml</script>
+    <script>scripts\sfx.gml</script>
   </scripts>
   <shaders name="shaders">
+    <shader type="GLSLES">shaders\shader1.shader</shader>
     <shader type="GLSLES">shaders\sdr_blend_shadow.shader</shader>
     <shader type="GLSLES">shaders\sdr_caster_outline.shader</shader>
     <shader type="GLSLES">shaders\sdr_dist.shader</shader>
@@ -95,6 +106,10 @@
       <object>objects\level1Controller</object>
       <object>objects\cameraTarget</object>
       <object>objects\interestObject</object>
+      <object>objects\interestObject512</object>
+      <object>objects\GuideTalk</object>
+      <object>objects\levelUp</object>
+      <object>objects\blackFade</object>
     </objects>
     <objects name="Fia">
       <object>objects\Fia</object>
@@ -110,9 +125,14 @@
       <object>objects\map</object>
       <object>objects\cast</object>
       <object>objects\light</object>
+      <object>objects\light512</object>
     </objects>
     <objects name="Ground">
       <object>objects\groundObject</object>
+    </objects>
+    <objects name="Set">
+      <object>objects\Bush</object>
+      <object>objects\BushNoCast</object>
     </objects>
   </objects>
   <rooms name="rooms">
