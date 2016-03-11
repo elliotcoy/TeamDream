@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>global.timeScale = 1;
+menu = 0;
+
+audio_sound_gain(audio_play_sound(bgm_level1,10,false),0,0)
+audio_sound_gain(audio_play_sound(bgm_level1,10,false),1,4000)
 </string>
           </argument>
         </arguments>
@@ -48,7 +52,45 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>switch(room){
+    case FrontEnd:
+        if(upButtonPressed()){
+            menu = clamp(menu-1, 0, 2)
+        }
+        if(downButtonPressed()){
+            menu = clamp(menu+1, 0, 2)
+        }
+        if(actionButtonPressed()){
+            if(menu==0){
+                room_goto(LevelOne)
+            }
+            else if(menu==1){
+                
+            }
+            else if(menu==2){
+                
+            }
+        }
+        
+    break;
+    
+    case LevelOne:
+    break;
+    
+    case LevelTwo:
+    break;
+    
+    case LevelThree:
+    break;
+    
+    case LevelFour:
+    break;
+        
+    case Prototype:
+        draw_text_colour(0,0,"FPS: "+string(fps),c_white,c_white,c_white,c_white,1)
+    break;
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -70,8 +112,49 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(Font_1);
-draw_text_colour(0,0,"FPS: "+string(fps),c_white,c_white,c_white,c_white,1);
+            <string>draw_set_font(StandardFont)
+
+draw_set_halign(fa_center)
+draw_set_valign(fa_middle)
+
+switch(room){
+    case FrontEnd:
+        draw_set_font(ExtraLargeFont)
+        draw_text_transformed_colour(view_wview/2, view_hview/2-64, "GUIDE", 1.5, 1.5, 0, c_white, c_white, c_white, c_white, 1)
+        draw_set_font(MenuFont)
+        if(menu==0){
+                draw_text_colour(view_wview/2, view_hview/2+128, "&gt; Start &lt;", c_white, c_white, c_white, c_white, 1)
+                draw_text_colour(view_wview/2, view_hview/2+192, "About", c_white, c_white, c_white, c_white, 1)
+                draw_text_colour(view_wview/2, view_hview/2+256, "Credits", c_white, c_white, c_white, c_white, 1)
+        }
+        else if(menu==1){
+                draw_text_colour(view_wview/2, view_hview/2+128, "Start", c_white, c_white, c_white, c_white, 1)
+                draw_text_colour(view_wview/2, view_hview/2+192, "&gt; About &lt;", c_white, c_white, c_white, c_white, 1)
+                draw_text_colour(view_wview/2, view_hview/2+256, "Credits", c_white, c_white, c_white, c_white, 1)
+        }
+        else if(menu==2){
+                draw_text_colour(view_wview/2, view_hview/2+128, "Start", c_white, c_white, c_white, c_white, 1)
+                draw_text_colour(view_wview/2, view_hview/2+192, "About", c_white, c_white, c_white, c_white, 1)
+                draw_text_colour(view_wview/2, view_hview/2+256, "&gt; Credits &lt;", c_white, c_white, c_white, c_white, 1)
+        }
+    break;
+    
+    case LevelOne:
+    break;
+    
+    case LevelTwo:
+    break;
+    
+    case LevelThree:
+    break;
+    
+    case LevelFour:
+    break;
+        
+    case Prototype:
+        draw_text_colour(0,0,"FPS: "+string(fps),c_white,c_white,c_white,c_white,1)
+    break;
+}
 </string>
           </argument>
         </arguments>

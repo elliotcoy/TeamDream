@@ -6,26 +6,44 @@
   <NewExtensions>
     <extension index="0">extensions\Shadows</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\bgm_level1</sound>
+  </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_new</sprite>
-    <sprite>sprites\interestSprite</sprite>
-    <sprite>sprites\lightSprite</sprite>
-    <sprite>sprites\groundSprite</sprite>
-    <sprite>sprites\theVoiceSprite</sprite>
     <sprites name="Fia">
       <sprite>sprites\FiaHitBox</sprite>
       <sprite>sprites\Idle</sprite>
       <sprite>sprites\Walk</sprite>
       <sprite>sprites\Jump</sprite>
       <sprite>sprites\Fly</sprite>
+      <sprite>sprites\Up</sprite>
+      <sprite>sprites\Down</sprite>
+      <sprite>sprites\FiaFire</sprite>
     </sprites>
+    <sprites name="VisualAids">
+      <sprite>sprites\lightSprite</sprite>
+      <sprite>sprites\cameraSprite</sprite>
+      <sprite>sprites\interestSprite</sprite>
+      <sprite>sprites\GuideSpeechSprite</sprite>
+      <sprite>sprites\levelUpSprite</sprite>
+      <sprite>sprites\groundSprite</sprite>
+    </sprites>
+    <sprites name="Set">
+      <sprite>sprites\BushSprite</sprite>
+    </sprites>
+    <sprite>sprites\theVoiceSprite</sprite>
+    <sprite>sprites\blackSprite</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
+    <background>background\bg_black</background>
     <background>background\bg1_01</background>
     <background>background\bg1_02</background>
     <background>background\bg1_03</background>
+    <background>background\bg3_1</background>
+    <background>background\bg3_2</background>
+    <background>background\bg3_3</background>
+    <background>background\bg3_4</background>
+    <background>background\bg3_0</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -49,7 +67,9 @@
       <script>scripts\actionButtonPressed.gml</script>
       <script>scripts\actionButtonReleased.gml</script>
       <script>scripts\upButton.gml</script>
+      <script>scripts\upButtonPressed.gml</script>
       <script>scripts\downButton.gml</script>
+      <script>scripts\downButtonPressed.gml</script>
       <script>scripts\leftButton.gml</script>
       <script>scripts\rightButton.gml</script>
     </scripts>
@@ -60,8 +80,12 @@
       <script>scripts\while_meeting.gml</script>
     </scripts>
     <script>scripts\friction.gml</script>
+    <script>scripts\changeSong.gml</script>
+    <script>scripts\changeSong2.gml</script>
+    <script>scripts\sfx.gml</script>
   </scripts>
   <shaders name="shaders">
+    <shader type="GLSLES">shaders\shader1.shader</shader>
     <shader type="GLSLES">shaders\sdr_blend_shadow.shader</shader>
     <shader type="GLSLES">shaders\sdr_caster_outline.shader</shader>
     <shader type="GLSLES">shaders\sdr_dist.shader</shader>
@@ -70,13 +94,22 @@
     <shader type="GLSLES">shaders\sdr_shadow.shader</shader>
   </shaders>
   <fonts name="fonts">
-    <font>fonts\Font_1</font>
+    <font>fonts\MenuFont</font>
+    <font>fonts\StandardFont</font>
+    <font>fonts\ExtraLargeFont</font>
   </fonts>
   <objects name="objects">
     <objects name="Controllers">
       <object>objects\gameController</object>
+      <object>objects\FrontEndController</object>
       <object>objects\autoBGparallax</object>
       <object>objects\level1Controller</object>
+      <object>objects\cameraTarget</object>
+      <object>objects\interestObject</object>
+      <object>objects\interestObject512</object>
+      <object>objects\GuideTalk</object>
+      <object>objects\levelUp</object>
+      <object>objects\blackFade</object>
     </objects>
     <objects name="Fia">
       <object>objects\Fia</object>
@@ -92,17 +125,24 @@
       <object>objects\map</object>
       <object>objects\cast</object>
       <object>objects\light</object>
+      <object>objects\light512</object>
     </objects>
     <objects name="Ground">
       <object>objects\groundObject</object>
     </objects>
-    <objects name="interests">
-      <object>objects\interestObject</object>
+    <objects name="Set">
+      <object>objects\Bush</object>
+      <object>objects\BushNoCast</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room2</room>
-    <room>rooms\room0</room>
+    <room>rooms\FrontEnd</room>
+    <room>rooms\Intro</room>
+    <room>rooms\LevelOne</room>
+    <room>rooms\LevelTwo</room>
+    <room>rooms\LevelThree</room>
+    <room>rooms\LevelFour</room>
+    <room>rooms\Prototype</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

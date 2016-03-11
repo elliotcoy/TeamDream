@@ -27,9 +27,13 @@
             <kind>1</kind>
             <string>onGround = 1
 flying = 0
-voice = instance_create(x,y,theVoice)
+
+voice = instance_create(x+2048,y,theVoice)
 skin = instance_create(x,y,FiaSkin)
 shadow = instance_create(x,y,FiaShadow)
+instance_create(x,y,cameraTarget)
+level = 0
+
 </string>
           </argument>
         </arguments>
@@ -114,64 +118,297 @@ if(hspeed&lt;-16){ hspeed=-16;}
             <kind>1</kind>
             <string>/// Player Controls
 
+switch(level){
+    case 5: //GLIDE*****************************************************************
+            if(leftButton())
+            {   if(rightButton()){
+                    friction(onGround)
+                    if(onGround){skin.sprite_index = Idle}
+                }
+                else{
+                //MOVE LEFT
+                    if(onGround){skin.sprite_index = Walk}
+                    skin.image_xscale = -1
+                    hspeed -= 2*global.timeScale
+                    if(hspeed &gt; 0){
+                        hspeed -= 2*global.timeScale
+                    }
+                }
+            }
+            else{
+                //MOVE RIGHT
+                if(rightButton()){
+                    if(onGround){skin.sprite_index = Walk}
+                    skin.image_xscale = 1
+                    hspeed += 2*global.timeScale
+                    if(hspeed &lt; 0){
+                        hspeed += 2*global.timeScale
+                    }
+                }
+                else{
+                    friction(onGround)
+                    if(onGround){skin.sprite_index = Idle}
+                }
+            }
+            //JUMP
+            if(onGround){
+                flying = false
+                if(actionButtonPressed()){
+                    vspeed = -28*global.timeScale
+                    onGround = false
+                }
+            }          
+            //Glide
+            else{
+                skin.sprite_index = Jump
+                onGround = false
+                if(actionButtonPressed()){
+                    flying = true
+                }
+                else if(actionButtonReleased()){
+                    flying = false
+                }
+                if(flying){
+                    skin.sprite_index = Fly
+                    if(vspeed&lt;0){ vspeed=0 }
+                    vspeed = clamp(vspeed-2,4,6)
+                    hspeed = clamp(hspeed+skin.image_xscale * 8 ,-32,32)
+                }
+            }
+        break;
+    case 4: //FIRE*****************************************************************
+            if(leftButton())
+            {   if(rightButton()){
+                    friction(onGround)
+                    if(onGround){skin.sprite_index = Idle}
+                }
+                else{
+                //MOVE LEFT
+                    if(onGround){skin.sprite_index = Walk}
+                    skin.image_xscale = -1
+                    hspeed -= 2*global.timeScale
+                    if(hspeed &gt; 0){
+                        hspeed -= 2*global.timeScale
+                    }
+                }
+            }
+            else{
+                //MOVE RIGHT
+                if(rightButton()){
+                    if(onGround){skin.sprite_index = Walk}
+                    skin.image_xscale = 1
+                    hspeed += 2*global.timeScale
+                    if(hspeed &lt; 0){
+                        hspeed += 2*global.timeScale
+                    }
+                }
+                else{
+                    friction(onGround)
+                    if(onGround){skin.sprite_index = Idle}
+                }
+            }
+            //JUMP
+            if(onGround){
+                flying = false
+                if(actionButtonPressed()){
+                    vspeed = -28*global.timeScale
+                    onGround = false
+                }
+            }          
+            //Glide
+            else{
+                skin.sprite_index = Jump
+                onGround = false
+                if(actionButtonPressed()){
+                    flying = true
+                }
+                else if(actionButtonReleased()){
+                    flying = false
+                }
+                if(flying){
+                    skin.sprite_index = Fly
+                    if(vspeed&lt;0){ vspeed=0 }
+                    vspeed = clamp(vspeed-2,4,6)
+                    hspeed = clamp(hspeed+skin.image_xscale * 8 ,-32,32)
+                }
+            }
+        break;
+    case 3: //SING*****************************************************************
+            if(leftButton())
+            {   if(rightButton()){
+                    friction(onGround)
+                    if(onGround){skin.sprite_index = Idle}
+                }
+                else{
+                //MOVE LEFT
+                    if(onGround){skin.sprite_index = Walk}
+                    skin.image_xscale = -1
+                    hspeed -= 2*global.timeScale
+                    if(hspeed &gt; 0){
+                        hspeed -= 2*global.timeScale
+                    }
+                }
+            }
+            else{
+                //MOVE RIGHT
+                if(rightButton()){
+                    if(onGround){skin.sprite_index = Walk}
+                    skin.image_xscale = 1
+                    hspeed += 2*global.timeScale
+                    if(hspeed &lt; 0){
+                        hspeed += 2*global.timeScale
+                    }
+                }
+                else{
+                    friction(onGround)
+                    if(onGround){skin.sprite_index = Idle}
+                }
+            }
+            //JUMP
+            if(onGround){
+                flying = false
+                if(actionButtonPressed()){
+                    vspeed = -28*global.timeScale
+                    onGround = false
+                }
+            }          
+            //Glide
+            else{
+                skin.sprite_index = Jump
+                onGround = false
+                if(actionButtonPressed()){
+                    flying = true
+                }
+                else if(actionButtonReleased()){
+                    flying = false
+                }
+                if(flying){
+                    skin.sprite_index = Fly
+                    if(vspeed&lt;0){ vspeed=0 }
+                    vspeed = clamp(vspeed-2,4,6)
+                    hspeed = clamp(hspeed+skin.image_xscale * 8 ,-32,32)
+                }
+            }
+        break;
+    case 2: //JUMP*****************************************************************
+            if(leftButton())
+            {   if(rightButton()){
+                    friction(onGround)
+                    if(onGround){skin.sprite_index = Idle}
+                }
+                else{
+                //MOVE LEFT
+                    if(onGround){skin.sprite_index = Walk}
+                    skin.image_xscale = -1
+                    hspeed -= 2*global.timeScale
+                    if(hspeed &gt; 0){
+                        hspeed -= 2*global.timeScale
+                    }
+                }
+            }
+            else{
+                //MOVE RIGHT
+                if(rightButton()){
+                    if(onGround){skin.sprite_index = Walk}
+                    skin.image_xscale = 1
+                    hspeed += 2*global.timeScale
+                    if(hspeed &lt; 0){
+                        hspeed += 2*global.timeScale
+                    }
+                }
+                else{
+                    friction(onGround)
+                    if(onGround){skin.sprite_index = Idle}
+                }
+            }
+            //JUMP
+            if(onGround){
+                flying = false
+                if(actionButtonPressed()){
+                    vspeed = -28*global.timeScale
+                    onGround = false
+                }
+            }          
+            //Glide
+            else{
+                skin.sprite_index = Jump
+                onGround = false
+                if(actionButtonPressed()){
+                    flying = true
+                }
+                else if(actionButtonReleased()){
+                    flying = false
+                }
+                if(flying){
+                    skin.sprite_index = Fly
+                    if(vspeed&lt;0){ vspeed=0 }
+                    vspeed = clamp(vspeed-2,4,6)
+                    hspeed = clamp(hspeed+skin.image_xscale * 8 ,-32,32)
+                }
+            }
+        break;
+    case 1: //WALK*****************************************************************
+            if(leftButton())
+            {   if(rightButton()){
+                    friction(onGround)
+                    if(onGround){skin.sprite_index = Idle}
+                }
+                else{
+                //MOVE LEFT
+                    if(onGround){skin.sprite_index = Walk}
+                    skin.image_xscale = -1
+                    hspeed -= 2*global.timeScale
+                    if(hspeed &gt; 0){
+                        hspeed -= 2*global.timeScale
+                    }
+                }
+            }
+            else{
+                //MOVE RIGHT
+                if(rightButton()){
+                    if(onGround){skin.sprite_index = Walk}
+                    skin.image_xscale = 1
+                    hspeed += 2*global.timeScale
+                    if(hspeed &lt; 0){
+                        hspeed += 2*global.timeScale
+                    }
+                }
+                else{
+                    friction(onGround)
+                    if(onGround){skin.sprite_index = Idle}
+                }
+            }
+            //JUMP
+            if(onGround){
+                flying = false
+                if(actionButtonPressed()){
+                    vspeed = -28*global.timeScale
+                    onGround = false
+                }
+            }          
+            //Glide
+            else{
+                skin.sprite_index = Jump
+                onGround = false
+                if(actionButtonPressed()){
+                    flying = true
+                }
+                else if(actionButtonReleased()){
+                    flying = false
+                }
+                if(flying){
+                    skin.sprite_index = Fly
+                    if(vspeed&lt;0){ vspeed=0 }
+                    vspeed = clamp(vspeed-2,4,6)
+                    hspeed = clamp(hspeed+skin.image_xscale * 8 ,-32,32)
+                }
+            }
+        break;
+    case 0: //IDLE*****************************************************************
+            //set sprite_index to shiver
+        break;
+}
 
-if(leftButton())
-{   if(rightButton()){
-        friction(onGround)
-        if(onGround){skin.sprite_index = Idle}
-    }
-    else{
-    //MOVE LEFT
-        if(onGround){skin.sprite_index = Walk}
-        skin.image_xscale = -1
-        hspeed -= 2*global.timeScale
-        if(hspeed &gt; 0){
-            hspeed -= 2*global.timeScale
-        }
-    }
-}
-else{
-    //MOVE RIGHT
-    if(rightButton()){
-        if(onGround){skin.sprite_index = Walk}
-        skin.image_xscale = 1
-        hspeed += 2*global.timeScale
-        if(hspeed &lt; 0){
-            hspeed += 2*global.timeScale
-        }
-    }
-    else{
-        friction(onGround)
-        if(onGround){skin.sprite_index = Idle}
-    }
-}
-
-//JUMP
-if(onGround){
-    flying = false
-    if(actionButtonPressed()){
-        vspeed = -28*global.timeScale
-        onGround = false
-    }
-}
-
-//Glide
-else{
-    skin.sprite_index = Jump
-    onGround = false
-    if(actionButtonPressed()){
-        flying = true
-    }
-    else if(actionButtonReleased()){
-        flying = false
-    }
-    if(flying){
-        skin.sprite_index = Fly
-        if(vspeed&lt;0){ vspeed=0 }
-        vspeed = clamp(vspeed-2,4,6)
-        hspeed = clamp(hspeed+skin.image_xscale * 8 ,-32,32)
-    }
-}
 
 
 </string>
