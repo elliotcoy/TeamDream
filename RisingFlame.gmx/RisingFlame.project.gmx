@@ -29,10 +29,13 @@
       <sprite>sprites\groundSprite</sprite>
     </sprites>
     <sprites name="Set">
+      <sprite>sprites\treeSprite1</sprite>
+      <sprite>sprites\treeSprite2</sprite>
+      <sprite>sprites\treeSprite2flip</sprite>
       <sprite>sprites\BushSprite</sprite>
+      <sprite>sprites\blackSprite</sprite>
+      <sprite>sprites\theVoiceSprite</sprite>
     </sprites>
-    <sprite>sprites\theVoiceSprite</sprite>
-    <sprite>sprites\blackSprite</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_black</background>
@@ -102,6 +105,8 @@
     <objects name="Controllers">
       <object>objects\gameController</object>
       <object>objects\FrontEndController</object>
+      <object>objects\TeaserController</object>
+      <object>objects\TeaserController2</object>
       <object>objects\autoBGparallax</object>
       <object>objects\level1Controller</object>
       <object>objects\cameraTarget</object>
@@ -109,7 +114,10 @@
       <object>objects\interestObject512</object>
       <object>objects\GuideTalk</object>
       <object>objects\levelUp</object>
+      <object>objects\levelDown</object>
       <object>objects\blackFade</object>
+      <object>objects\roomPusher</object>
+      <object>objects\FadeIn</object>
     </objects>
     <objects name="Fia">
       <object>objects\Fia</object>
@@ -133,12 +141,19 @@
     <objects name="Set">
       <object>objects\Bush</object>
       <object>objects\BushNoCast</object>
+      <object>objects\tree1</object>
+      <object>objects\tree2</object>
+      <object>objects\tree2flip</object>
     </objects>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\FrontEnd</room>
     <room>rooms\Intro</room>
     <room>rooms\LevelOne</room>
+    <room>rooms\teaser</room>
+    <room>rooms\teaser2</room>
+    <room>rooms\goHome</room>
     <room>rooms\LevelTwo</room>
     <room>rooms\LevelThree</room>
     <room>rooms\LevelFour</room>

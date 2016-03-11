@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>global.timeScale = 1;
 menu = 0;
-
+DERP = 0;
 audio_sound_gain(audio_play_sound(bgm_level1,10,false),0,0)
 audio_sound_gain(audio_play_sound(bgm_level1,10,false),1,4000)
 </string>
@@ -61,17 +61,23 @@ audio_sound_gain(audio_play_sound(bgm_level1,10,false),1,4000)
             menu = clamp(menu+1, 0, 2)
         }
         if(actionButtonPressed()){
-            if(menu==0){
-                room_goto(LevelOne)
-            }
-            else if(menu==1){
-                
-            }
-            else if(menu==2){
-                
+            switch(DERP){
+                case 0:
+                    if(menu==0){
+                        room_goto(LevelOne)
+                    }
+                    else if(menu==1){
+                        DERP = 1                
+                    }
+                    else if(menu==2){
+                        DERP = 2
+                    }
+                    break;
+                case 1: DERP = 0; break;
+                case 2: DERP = 0; break;
             }
         }
-        
+
     break;
     
     case LevelOne:
@@ -119,23 +125,67 @@ draw_set_valign(fa_middle)
 
 switch(room){
     case FrontEnd:
-        draw_set_font(ExtraLargeFont)
-        draw_text_transformed_colour(view_wview/2, view_hview/2-64, "GUIDE", 1.5, 1.5, 0, c_white, c_white, c_white, c_white, 1)
-        draw_set_font(MenuFont)
-        if(menu==0){
-                draw_text_colour(view_wview/2, view_hview/2+128, "&gt; Start &lt;", c_white, c_white, c_white, c_white, 1)
-                draw_text_colour(view_wview/2, view_hview/2+192, "About", c_white, c_white, c_white, c_white, 1)
-                draw_text_colour(view_wview/2, view_hview/2+256, "Credits", c_white, c_white, c_white, c_white, 1)
-        }
-        else if(menu==1){
-                draw_text_colour(view_wview/2, view_hview/2+128, "Start", c_white, c_white, c_white, c_white, 1)
-                draw_text_colour(view_wview/2, view_hview/2+192, "&gt; About &lt;", c_white, c_white, c_white, c_white, 1)
-                draw_text_colour(view_wview/2, view_hview/2+256, "Credits", c_white, c_white, c_white, c_white, 1)
-        }
-        else if(menu==2){
-                draw_text_colour(view_wview/2, view_hview/2+128, "Start", c_white, c_white, c_white, c_white, 1)
-                draw_text_colour(view_wview/2, view_hview/2+192, "About", c_white, c_white, c_white, c_white, 1)
-                draw_text_colour(view_wview/2, view_hview/2+256, "&gt; Credits &lt;", c_white, c_white, c_white, c_white, 1)
+        switch(DERP){
+            case 0: //********************************************************************************
+                draw_set_font(ExtraLargeFont)
+                draw_text_transformed_colour(view_wview/2, view_hview/2-64, "GUIDE", 1.5, 1.5, 0, c_white, c_white, c_white, c_white, 1)
+                draw_set_font(MenuFont)
+                if(menu==0){
+                        draw_text_colour(view_wview/2, view_hview/2+128, "&gt; Start &lt;", c_white, c_white, c_white, c_white, 1)
+                        draw_text_colour(view_wview/2, view_hview/2+192, "About", c_white, c_white, c_white, c_white, 1)
+                        draw_text_colour(view_wview/2, view_hview/2+256, "Credits", c_white, c_white, c_white, c_white, 1)
+                }
+                else if(menu==1){
+                        draw_text_colour(view_wview/2, view_hview/2+128, "Start", c_white, c_white, c_white, c_white, 1)
+                        draw_text_colour(view_wview/2, view_hview/2+192, "&gt; About &lt;", c_white, c_white, c_white, c_white, 1)
+                        draw_text_colour(view_wview/2, view_hview/2+256, "Credits", c_white, c_white, c_white, c_white, 1)
+                }
+                else if(menu==2){
+                        draw_text_colour(view_wview/2, view_hview/2+128, "Start", c_white, c_white, c_white, c_white, 1)
+                        draw_text_colour(view_wview/2, view_hview/2+192, "About", c_white, c_white, c_white, c_white, 1)
+                        draw_text_colour(view_wview/2, view_hview/2+256, "&gt; Credits &lt;", c_white, c_white, c_white, c_white, 1)
+                }
+                break;
+            case 1: //********************************************************************************
+                draw_set_font(MenuFont)
+                draw_set_valign(fa_top)
+                draw_text_ext_colour(view_wview/2, 
+                                    64, 
+                                    "This game is an early alpha build for the joint iThrive and Games4Health empathy contest challenge.
+                                    #
+                                    #To learn more about the contest, please visit 
+                                    #https://g4h2016.utah.spigit.com/Page/home2", 
+                                    72,
+                                    1156,
+                                    c_white, c_white, 
+                                    c_white, c_white,
+                                    1)
+                break;
+            case 2: //********************************************************************************
+                draw_set_font(StandardFont)
+                draw_set_valign(fa_top)
+                draw_text_ext_colour(view_wview/2, 
+                                    32, 
+                                    "Alpha build of GUIDE designed by Team Dream:
+                                    #
+                                    #Elliot Coy 
+                                    #Jade Yhap
+                                    #Rebecca Goodine
+                                    #
+                                    #Additional Credits:
+                                    #Chad Comeau - Story consultation
+                                    #Jeff Mundee - Creative assistance
+                                    #Jordan Roherty - Music and audio design
+                                    #Mary Brantnall - Art consultation
+                                    #Dominick Schroer - Lighting engine
+                                    #
+                                    #Special thanks to iThrive and Games4Health, who inspired us to create.", 
+                                    24,
+                                    1156,
+                                    c_white, c_white, 
+                                    c_white, c_white,
+                                    1)
+                break;
         }
     break;
     
