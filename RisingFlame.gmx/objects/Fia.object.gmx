@@ -93,8 +93,11 @@ vspeed+=2*global.timeScale;
 //Max Velocity
 if(vspeed&gt; 40){ vspeed= 40;}
 if(vspeed&lt;-40){ vspeed=-40;}
-if(hspeed&gt; 16){ hspeed= 16;}
-if(hspeed&lt;-16){ hspeed=-16;}
+
+if(!flying){
+    if(hspeed&gt; 8+2*level){ hspeed= 8+2*level;}
+    if(hspeed&lt;-8-2*level){ hspeed=-8-2*level;}
+}
 
 </string>
           </argument>
@@ -405,6 +408,8 @@ switch(level){
             }
         break;
     case 0: //IDLE*****************************************************************
+            friction(onGround)
+            skin.sprite_index = Idle
             //set sprite_index to shiver
         break;
 }
