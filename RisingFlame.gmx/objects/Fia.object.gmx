@@ -336,18 +336,6 @@ switch(level){
             else{
                 skin.sprite_index = Jump
                 onGround = false
-                if(actionButtonPressed()){
-                    flying = true
-                }
-                else if(actionButtonReleased()){
-                    flying = false
-                }
-                if(flying){
-                    skin.sprite_index = Fly
-                    if(vspeed&lt;0){ vspeed=0 }
-                    vspeed = clamp(vspeed-2,4,6)
-                    hspeed = clamp(hspeed+skin.image_xscale * 8 ,-32,32)
-                }
             }
         break;
     case 1: //WALK*****************************************************************

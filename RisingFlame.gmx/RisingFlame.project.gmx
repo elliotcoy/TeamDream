@@ -36,6 +36,7 @@
       <sprite>sprites\blackSprite</sprite>
       <sprite>sprites\theVoiceSprite</sprite>
     </sprites>
+    <sprite>sprites\interestSpriteMoveSprite</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_black</background>
@@ -146,7 +147,6 @@
       <object>objects\tree2flip</object>
     </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\FrontEnd</room>
     <room>rooms\Intro</room>
