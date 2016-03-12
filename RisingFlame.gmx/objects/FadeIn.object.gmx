@@ -80,7 +80,6 @@ if(!counter){
           <argument>
             <kind>1</kind>
             <string>draw_set_alpha(a)
-draw_set_color(c_black)
 draw_rectangle(
         0,
         0,
@@ -89,7 +88,6 @@ draw_rectangle(
         0
     )
 draw_set_alpha(1)
-draw_set_color(c_white)
 </string>
           </argument>
         </arguments>

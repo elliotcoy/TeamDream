@@ -3,7 +3,7 @@
   <caption></caption>
   <width>5480</width>
   <height>800</height>
-  <vsnap>16</vsnap>
+  <vsnap>128</vsnap>
   <hsnap>128</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
@@ -78,7 +78,7 @@
     <instance objName="groundObject" x="2688" y="800" name="inst_8AACD5D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="2816" y="800" name="inst_EB81BC11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="groundObject" x="0" y="256" name="inst_900BE6A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="light512" x="0" y="608" name="inst_CBAD15B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="light512" x="78" y="647" name="inst_CBAD15B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Bush" x="384" y="672" name="inst_3EA8A9C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Bush" x="0" y="672" name="inst_E11CFBF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Bush" x="768" y="672" name="inst_A9E45ABA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
