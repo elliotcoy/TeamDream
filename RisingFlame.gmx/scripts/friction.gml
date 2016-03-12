@@ -1,4 +1,4 @@
-////friction(strength)
+///friction(strength)
 f = argument0+1;
 
 if(hspeed>0){
