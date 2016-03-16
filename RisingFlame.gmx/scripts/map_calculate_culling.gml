@@ -4,6 +4,8 @@ var c;
 l = ds_map_find_value(instance_find(obj_light_var,0).map_layer,string(layer));
 c = ds_map_find_value(instance_find(obj_light_var,0).cul_layer,string(layer));
 
+
+
 for(i = 0; i < ds_list_size(l); i++)
 {
     var obj;
@@ -13,29 +15,45 @@ for(i = 0; i < ds_list_size(l); i++)
     {
         if(self.layer == other.layer)
         {
-            lastCol = self.collision;
-                        
-            var xp, yp, sp;
-            xp = self.x + (self.light_size / 2);
-            yp = self.y + (self.light_size / 2);
-            sp = (self.light_size / 2);
-            
-            collision = false;
-            for(j = 0; j < ds_list_size(c); j++)
+            hl = (self.light_size / 2);
+            if(self.x - hl < view_xview + view_wview && self.x + hl > view_xview)
             {
-                var ob;
-                ob = ds_list_find_value(c, j);
-                
-                if(collision_circle( xp, yp, sp ,ob, true, true))
+                if(self.y - hl < view_yview + view_hview && self.y + hl > view_yview)
                 {
-                    collision = true;
-                    break;
+                    self.in_view = true;
+                }else{
+                    self.in_view = false;
                 }
+            }else{
+                self.in_view = false;
             }
-
-            if(lastCol && !collision)
+            
+            if(self.in_view)
             {
-                self.rendered = false;
+                lastCol = self.collision;
+                            
+                var xp, yp, sp;
+                xp = self.x + (self.light_size / 2);
+                yp = self.y + (self.light_size / 2);
+                sp = (self.light_size / 2);
+                
+                collision = false;
+                for(j = 0; j < ds_list_size(c); j++)
+                {
+                    var ob;
+                    ob = ds_list_find_value(c, j);
+                    
+                    if(collision_circle( xp, yp, sp ,ob, true, true))
+                    {
+                        collision = true;
+                        break;
+                    }
+                }
+    
+                if(lastCol && !collision)
+                {
+                    self.rendered = false;
+                }
             }
         }
     }

@@ -16,6 +16,11 @@ for(i = 0; i < ds_list_size(l); i++)
     var obj;
     obj = ds_list_find_value(l, i);
     
+    if(!obj.in_view)
+    {
+        continue;
+    }
+    
     with(obj)
     {
         if(self.layer == other.layer)

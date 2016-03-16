@@ -30,6 +30,7 @@ sprite_index = noone;
 self.collision = false;
 rendered = false;
 shadow_color = c_red;
+in_view = false;
 
 gradient = 1.0;
 
